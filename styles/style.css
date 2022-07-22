@@ -104,8 +104,28 @@ Courses Styles
     height: 141px;
 }
 
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+
+}
+
+.course {
+    background-color: #0000000D;
+}
+
 .course-info {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-duration {
+    color: #FF4A60;
+    background-color: #FEE5DF;
+    border-radius: 14.6913px;
+    padding: 3px 5px;
 }
 
 .fa-star {
@@ -118,4 +138,38 @@ Courses Styles
 
 .fa-star.empty {
     color: #AEAEAE;
+}
+
+/*--------------------------
+ Media Queries 
+ -------------------------*/
+/* Mobile devices */
+@media only screen and (max-width: 688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
